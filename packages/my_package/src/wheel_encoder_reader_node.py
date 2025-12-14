@@ -17,9 +17,12 @@ class WheelEncoderReaderNode(DTROS):
        self._vehicle_name = os.environ['VEHICLE_NAME']
        
        # Definir los tópicos específicos para cada rueda
-       self._left_encoder_topic = f"/{self._vehicle_name}/left_wheel_encoder_node/tick"
-       self._right_encoder_topic = f"/{self._vehicle_name}/right_wheel_encoder_node/tick"
-       
+       #self._left_encoder_topic = f"/{self._vehicle_name}/left_wheel_encoder_node/tick"
+       #self._right_encoder_topic = f"/{self._vehicle_name}/right_wheel_encoder_node/tick"
+       self._left_encoder_topic = f"/{self._vehicle_name}/left_wheel_encoder_driver_node/tick"
+       self._right_encoder_topic = f"/{self._vehicle_name}/right_wheel_encoder_driver_node/tick"
+
+
        # Variables para almacenar los últimos valores leídos
        self._ticks_left = None
        self._ticks_right = None
